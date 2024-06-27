@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e1dbef37-612e-4557-bd05-5daf2faebbc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_tables/chats_create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_tables/groups_create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_tables/people_create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_vault.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/links/L_chat_owners" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/links/L_gourps_create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/links/L_person_chat_create.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/satellites/s_group_info_create.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2iTZNzsjNRdnwb1PXrq8GEA24Cw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1dbef37-612e-4557-bd05-5daf2faebbc4" name="Changes" comment="" />
+      <created>1719516494181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719516494181</updated>
+    </task>
+    <servers />
+  </component>
+</project>
