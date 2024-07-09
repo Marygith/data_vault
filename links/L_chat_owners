@@ -1,8 +1,8 @@
-CREATE TABLE L_chat_owners (
+CREATE TABLE IF NOT EXISTS dds.L_chat_owners (
     hk_L_owner_id INT,
     hk_person_id INT,
     hk_group_id INT,
-    source TEXT,
+    source VARCHAR(100),
     load_date TIMESTAMP,
     PRIMARY KEY (hk_L_owner_id)
-) DISTRIBUTED BY (hk_L_owner_id);
+);

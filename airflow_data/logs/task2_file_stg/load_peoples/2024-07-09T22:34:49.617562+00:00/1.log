@@ -1,0 +1,81 @@
+[2024-07-09 22:34:55,556] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: task2_file_stg.load_peoples scheduled__2024-07-09T22:34:49.617562+00:00 [queued]>
+[2024-07-09 22:34:55,568] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: task2_file_stg.load_peoples scheduled__2024-07-09T22:34:49.617562+00:00 [queued]>
+[2024-07-09 22:34:55,569] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-09 22:34:55,570] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2024-07-09 22:34:55,571] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-09 22:34:55,581] {taskinstance.py:1259} INFO - Executing <Task(_PythonDecoratedOperator): load_peoples> on 2024-07-09 22:34:49.617562+00:00
+[2024-07-09 22:34:55,585] {standard_task_runner.py:52} INFO - Started process 181 to run task
+[2024-07-09 22:34:55,588] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'task2_file_stg', 'load_peoples', 'scheduled__2024-07-09T22:34:49.617562+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/task2_file_stg.py', '--cfg-path', '/tmp/tmpi6lcv6dt', '--error-file', '/tmp/tmpws56z4a_']
+[2024-07-09 22:34:55,593] {standard_task_runner.py:77} INFO - Job 3: Subtask load_peoples
+[2024-07-09 22:34:55,659] {logging_mixin.py:109} INFO - Running <TaskInstance: task2_file_stg.load_peoples scheduled__2024-07-09T22:34:49.617562+00:00 [running]> on host 676d07ac814a
+[2024-07-09 22:34:55,725] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=task2_file_stg
+AIRFLOW_CTX_TASK_ID=load_peoples
+AIRFLOW_CTX_EXECUTION_DATE=2024-07-09T22:34:49.617562+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-07-09T22:34:49.617562+00:00
+[2024-07-09 22:34:55,743] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/decorators/base.py", line 134, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/task2_file_stg.py", line 43, in load_peoples
+    truncate("peoples")
+  File "/opt/airflow/dags/task2_file_stg.py", line 38, in truncate
+    cursor.execute(truncate_query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 238, in execute
+    self._execute_simple_query(operation)
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 660, in _execute_simple_query
+    raise errors.QueryError.from_error_response(self._message, query)
+vertica_python.errors.MissingRelation: Severity: ROLLBACK, Message: Table "peoples" does not exist, Sqlstate: 42V01, Routine: TruncateTable, File: /data/jenkins/workspace/RE-ReleaseBuilds/RE-Miner/server/vertica/Commands/DDL.cpp, Line: 20475, Error Code: 4876, SQL: 'TRUNCATE TABLE public.peoples'
+[2024-07-09 22:34:55,758] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=task2_file_stg, task_id=load_peoples, execution_date=20240709T223449, start_date=20240709T223455, end_date=20240709T223455
+[2024-07-09 22:34:55,772] {standard_task_runner.py:92} ERROR - Failed to execute job 3 for task load_peoples
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/decorators/base.py", line 134, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/task2_file_stg.py", line 43, in load_peoples
+    truncate("peoples")
+  File "/opt/airflow/dags/task2_file_stg.py", line 38, in truncate
+    cursor.execute(truncate_query)
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 238, in execute
+    self._execute_simple_query(operation)
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 660, in _execute_simple_query
+    raise errors.QueryError.from_error_response(self._message, query)
+vertica_python.errors.MissingRelation: Severity: ROLLBACK, Message: Table "peoples" does not exist, Sqlstate: 42V01, Routine: TruncateTable, File: /data/jenkins/workspace/RE-ReleaseBuilds/RE-Miner/server/vertica/Commands/DDL.cpp, Line: 20475, Error Code: 4876, SQL: 'TRUNCATE TABLE public.peoples'
+[2024-07-09 22:34:55,812] {local_task_job.py:154} INFO - Task exited with return code 1
+[2024-07-09 22:34:55,860] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
