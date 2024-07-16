@@ -129,56 +129,56 @@ def load_stg_to_dds():
                                       (hk_msg_id, row[0], row[1], 'TEST', datetime.now()))
                 i = i + 1
 
+
+            # Заполнение h_groups
+            source_cursor.execute("SELECT * FROM stg.groups")
+            target_cursor.execute("SELECT max(hk_group_id) FROM dds.h_groups") # выгрузка макс значения для формирования id
+            try:
+                target_rows_cnt = int(target_cursor.fetchone()[0])
+            except TypeError:
+                target_rows_cnt = 0
+
+            insert_h_groups = """
+                    INSERT INTO dds.h_groups(hk_group_id, group_id, created_date, source, load_date)
+                    VALUES (%s, %s, %s, %s, %s)
+                """
+
+            i = 1
+            for row in source_cursor.fetchall():
+                hk_group_id = target_rows_cnt + i
+                target_cursor.execute(insert_h_groups,
+                                      (hk_group_id, row[0], row[3], 'TEST', datetime.now()))
+                i = i + 1
+
+
             # # Заполнение l_groups
-            # source_cursor.execute("SELECT * FROM stg.chats")
-            # target_cursor.execute("SELECT max(hk_L_group_id) FROM dds.L_groups") # выгрузка макс значения для формирования id
-            # try:
-            #     target_rows_cnt = int(target_cursor.fetchone()[0])
-            # except TypeError:
-            #     target_rows_cnt = 0
+            source_cursor.execute('''
+                select distinct hc.hk_msg_id, hg.hk_group_id  
+                from stg.chats c 
+                inner join dds.h_chats hc 
+                    on hc.msg_id = c.msg_id 
+                inner join dds.h_groups hg 
+                    on hg.group_id = c.msg_group_id
 
-            # insert_l_groups = """
-            #         INSERT INTO dds.L_groups(hk_L_group_id, hk_msg_id, hk_group_id, source, load_date)
-            #         VALUES (%s, %s, %s, %s, %s)
-            #     """
+            ''') # выгрузка макс значения для формирования id
+            target_cursor.execute("SELECT max(hk_L_group_id) FROM dds.L_groups") # выгрузка макс значения для формирования id
 
-            # for row in source_cursor.fetchall():
-            #     hk_L_group_id = generate_hash(row[0], row[5])  # уникальный ключ группаид+сообщениеид
-            #     hk_msg_id = generate_hash(row[0])
-            #     hk_group_id = generate_hash(row[5])
-            #     target_cursor.execute(insert_l_groups,
-            #                           (hk_L_group_id, hk_msg_id, hk_group_id, 'TEST', datetime.now()))
+            try:
+                target_rows_cnt = int(target_cursor.fetchone()[0])
+            except TypeError:
+                target_rows_cnt = 0
 
-            # # Заполнение h_groups
-            # source_cursor.execute("SELECT * FROM groups")
-            # for row in source_cursor.fetchall():
-            #     hk_group_id = generate_hash(row[0])
-            #     insert_h_groups = """
-            #         INSERT INTO h_groups(hk_group_id, group_id, created_date, source, load_date)
-            #         VALUES (%s, %s, %s, %s, %s)
-            #     """
-            #     target_cursor.execute(insert_h_groups,
-            #                           (hk_group_id, row[0], row[3], 'source_system', datetime.now()))
+            insert_l_groups = """
+                    INSERT INTO dds.L_groups(hk_L_group_id, hk_msg_id, hk_group_id, source, load_date)
+                    VALUES (%s, %s, %s, %s, %s)
+                """
 
-            # # # Заполнение l_chat_owners
-            # # source_cursor.execute("SELECT * FROM h_groups")
-            # # for row in source_cursor.fetchall():
-            # #     hk_group_id = row[0]
-            # #     query_get_owner_id = """
-            # #         SELECT * FROM groups
-            # #     """
-            # #     result_id = target_cursor.execute(query_get_owner_id).fetchall()
-            # #     for result_id_s in result_id:
-            # #         if generate_hash(result_id_s[0]) == hk_group_id:
-            # #             owner_id = result_id_s[1]
-            # #             owner_id = generate_hash(owner_id)
-            # #             insert_l_chat_owners = """
-            # #                 INSERT INTO L_chat_owners(hk_L_owner_id, hk_person_id, hk_group_id, source, load_date)
-            # #                 VALUES (%s, %s, %s, %s, %s)
-            # #             """
-            # #             target_cursor.execute(insert_l_chat_owners,
-            # #                                   (owner_id, owner_id, hk_group_id, 'source_system', datetime.now()))
-            # #             break
+            i = 1
+            for row in source_cursor.fetchall():
+                hk_L_group_id = target_rows_cnt + i
+                target_cursor.execute(insert_l_groups,
+                                      (hk_L_group_id, row[0], row[1], 'TEST', datetime.now()))
+                i = i + 1
 
             # # Заполнение l_chat_owners
             # source_cursor.execute("SELECT * FROM groups")
