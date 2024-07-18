@@ -160,7 +160,7 @@ def load_stg_to_dds():
                 inner join dds.h_groups hg 
                     on hg.group_id = c.msg_group_id
 
-            ''') # выгрузка макс значения для формирования id
+            ''') 
             target_cursor.execute("SELECT max(hk_L_group_id) FROM dds.L_groups") # выгрузка макс значения для формирования id
 
             try:
@@ -180,30 +180,54 @@ def load_stg_to_dds():
                                       (hk_L_group_id, row[0], row[1], 'TEST', datetime.now()))
                 i = i + 1
 
-            # # Заполнение l_chat_owners
-            # source_cursor.execute("SELECT * FROM groups")
-            # for row in source_cursor.fetchall():
-            #     hk_group_id = generate_hash(row[0])
-            #     hk_owner_id = generate_hash(row[1])
-            #     insert_l_chat_owners = """
-            #                 INSERT INTO L_chat_owners(hk_L_owner_id, hk_person_id, hk_group_id, source, load_date)
-            #                 VALUES (%s, %s, %s, %s, %s)
-            #             """
-            #     target_cursor.execute(insert_l_chat_owners,
-            #                           (hk_owner_id, hk_owner_id, hk_group_id, 'source_system', datetime.now()))
+            # Заполнение l_chat_owners
+            source_cursor.execute('''
+                select distinct g.owner_id, hg.hk_group_id  
+                from stg.groups g 
+                --inner join dds.h_people hp 
+                --  on hp.person_id = g.owner_id 
+                inner join dds.h_groups hg 
+                    on hg.group_id = g.id 
+            ''')
+            target_cursor.execute("SELECT max(hk_L_owner_id) FROM dds.L_chat_owners") # выгрузка макс значения для формирования id
+            try:
+                target_rows_cnt = int(target_cursor.fetchone()[0])
+            except TypeError:
+                target_rows_cnt = 0
 
-            # # Заполнение l_person_chat (какие люди в каких есть чатах)
-            # source_cursor.execute("SELECT * from chats")
-            # for row in source_cursor.fetchall():
-            #     hk_l_person_chat = generate_hash(row[0], row[1])
-            #     hk_person_id = generate_hash(row[2])
-            #     hk_msg_id = generate_hash(row[0])
-            #     insert_l_person_chat = """
-            #         INSERT INTO public.L_person_chat(hk_L_person_chat, hk_person_id, hk_msg_id, source, load_date)
-            #         VALUES (%s, %s, %s, %s, %s)
-            #     """
-            #     target_cursor.execute(insert_l_person_chat,
-            #                           (hk_l_person_chat, hk_person_id, hk_msg_id, 'source_system', datetime.now()))
+            insert_l_chat_owners = """
+                INSERT INTO dds.L_chat_owners(hk_L_owner_id, hk_person_id, hk_group_id, source, load_date)
+                VALUES (%s, %s, %s, %s, %s)
+            """
+
+            i = 1
+            for row in source_cursor.fetchall():
+                hk_owner_id = target_rows_cnt + i
+                target_cursor.execute(insert_l_chat_owners,
+                                      (hk_owner_id, row[0], row[1], 'TEST', datetime.now()))
+                i = i + 1
+
+            # Заполнение l_person_chat (какие люди в каких есть чатах)
+            source_cursor.execute("SELECT * from stg.chats")
+            target_cursor.execute("SELECT max(hk_L_person_chat) FROM dds.L_person_chat") # выгрузка макс значения для формирования id
+            try:
+                target_rows_cnt = int(target_cursor.fetchone()[0])
+            except TypeError:
+                target_rows_cnt = 0
+
+            insert_l_person_chat = """
+                    INSERT INTO dds.L_person_chat(hk_L_person_chat, hk_person_id, hk_msg_id, source, load_date)
+                    VALUES (%s, %s, %s, %s, %s)
+            """
+
+            i = 1
+            for row in source_cursor.fetchall():
+                hk_l_person_chat = target_rows_cnt + 1
+                hk_person_id = target_rows_cnt + 1
+                hk_msg_id = target_rows_cnt + 1
+                target_cursor.execute(insert_l_person_chat,
+                                      (hk_l_person_chat, hk_person_id, hk_msg_id, 'TEST', datetime.now()))
+                i = i + 1
 
         src_conn.commit()
         dds_conn.commit()
