@@ -1,0 +1,167 @@
+[2024-08-01 01:20:43,926] {processor.py:163} INFO - Started process (PID=74941) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 01:20:43,928] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 01:20:43,929] {logging_mixin.py:109} INFO - [2024-08-01 01:20:43,929] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 01:20:44,016] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 01:20:44,427] {logging_mixin.py:109} INFO - [2024-08-01 01:20:44,427] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 01:20:44,442] {logging_mixin.py:109} INFO - [2024-08-01 01:20:44,442] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 01:20:44,458] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.539 seconds
+[2024-08-01 01:21:16,924] {processor.py:163} INFO - Started process (PID=74951) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 01:21:17,084] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 01:21:17,190] {logging_mixin.py:109} INFO - [2024-08-01 01:21:17,185] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 01:21:25,770] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 01:21:42,567] {logging_mixin.py:109} INFO - [2024-08-01 01:21:42,566] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 01:21:42,620] {logging_mixin.py:109} INFO - [2024-08-01 01:21:42,620] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 01:21:42,685] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 26.117 seconds
+[2024-08-01 03:22:00,891] {processor.py:163} INFO - Started process (PID=74967) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:22:00,894] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 03:22:00,897] {logging_mixin.py:109} INFO - [2024-08-01 03:22:00,897] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:22:01,117] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:22:01,471] {logging_mixin.py:109} INFO - [2024-08-01 03:22:01,470] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 03:22:01,488] {logging_mixin.py:109} INFO - [2024-08-01 03:22:01,488] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 03:22:01,505] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.630 seconds
+[2024-08-01 03:22:33,124] {processor.py:163} INFO - Started process (PID=74977) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:22:33,236] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 03:22:33,285] {logging_mixin.py:109} INFO - [2024-08-01 03:22:33,277] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:22:37,935] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:22:54,771] {logging_mixin.py:109} INFO - [2024-08-01 03:22:54,766] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 03:22:55,389] {logging_mixin.py:109} INFO - [2024-08-01 03:22:55,383] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 03:22:55,799] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 22.911 seconds
+[2024-08-01 03:31:25,936] {processor.py:163} INFO - Started process (PID=74987) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:31:25,939] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 03:31:25,941] {logging_mixin.py:109} INFO - [2024-08-01 03:31:25,940] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:31:26,891] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:31:27,388] {logging_mixin.py:109} INFO - [2024-08-01 03:31:27,388] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 03:31:27,407] {logging_mixin.py:109} INFO - [2024-08-01 03:31:27,407] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 03:31:27,431] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 1.506 seconds
+[2024-08-01 03:32:01,309] {processor.py:163} INFO - Started process (PID=74997) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:32:01,365] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 03:32:01,460] {logging_mixin.py:109} INFO - [2024-08-01 03:32:01,457] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 03:32:06,447] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 05:32:15,651] {processor.py:163} INFO - Started process (PID=75008) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 05:32:15,653] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 05:32:15,654] {logging_mixin.py:109} INFO - [2024-08-01 05:32:15,654] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 05:32:15,748] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 05:32:16,053] {logging_mixin.py:109} INFO - [2024-08-01 05:32:16,053] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 05:32:16,074] {logging_mixin.py:109} INFO - [2024-08-01 05:32:16,074] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 05:32:16,093] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.447 seconds
+[2024-08-01 05:32:47,562] {processor.py:163} INFO - Started process (PID=75019) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 05:32:47,638] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 05:32:47,697] {logging_mixin.py:109} INFO - [2024-08-01 05:32:47,681] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 05:32:51,844] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:03:37,951] {logging_mixin.py:109} INFO - [2024-08-01 06:03:37,951] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:03:39,069] {processor.py:163} INFO - Started process (PID=75030) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:03:39,071] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:03:39,073] {logging_mixin.py:109} INFO - [2024-08-01 06:03:39,073] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:03:39,163] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:03:39,416] {logging_mixin.py:109} INFO - [2024-08-01 06:03:39,416] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:03:39,433] {logging_mixin.py:109} INFO - [2024-08-01 06:03:39,433] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:03:39,450] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.385 seconds
+[2024-08-01 06:04:11,498] {processor.py:163} INFO - Started process (PID=75040) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:04:11,566] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:04:11,631] {logging_mixin.py:109} INFO - [2024-08-01 06:04:11,625] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:04:16,311] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:04:31,484] {logging_mixin.py:109} INFO - [2024-08-01 06:04:31,469] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:04:32,384] {logging_mixin.py:109} INFO - [2024-08-01 06:04:32,376] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:04:32,763] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 21.448 seconds
+[2024-08-01 06:05:03,939] {processor.py:163} INFO - Started process (PID=75050) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:05:03,941] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:05:03,942] {logging_mixin.py:109} INFO - [2024-08-01 06:05:03,942] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:05:04,008] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:05:04,195] {logging_mixin.py:109} INFO - [2024-08-01 06:05:04,194] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:05:04,209] {logging_mixin.py:109} INFO - [2024-08-01 06:05:04,209] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:05:04,225] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.290 seconds
+[2024-08-01 06:05:34,377] {processor.py:163} INFO - Started process (PID=75060) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:05:34,379] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:05:34,380] {logging_mixin.py:109} INFO - [2024-08-01 06:05:34,380] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:05:34,446] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:05:34,643] {logging_mixin.py:109} INFO - [2024-08-01 06:05:34,643] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:05:34,657] {logging_mixin.py:109} INFO - [2024-08-01 06:05:34,657] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:05:34,672] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.300 seconds
+[2024-08-01 06:06:04,890] {processor.py:163} INFO - Started process (PID=75070) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:06:04,891] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:06:04,892] {logging_mixin.py:109} INFO - [2024-08-01 06:06:04,892] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:06:04,961] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:06:05,148] {logging_mixin.py:109} INFO - [2024-08-01 06:06:05,148] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:06:05,164] {logging_mixin.py:109} INFO - [2024-08-01 06:06:05,164] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:06:05,179] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.293 seconds
+[2024-08-01 06:06:35,333] {processor.py:163} INFO - Started process (PID=75080) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:06:35,335] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:06:35,336] {logging_mixin.py:109} INFO - [2024-08-01 06:06:35,336] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:06:35,404] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:06:35,590] {logging_mixin.py:109} INFO - [2024-08-01 06:06:35,590] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:06:35,605] {logging_mixin.py:109} INFO - [2024-08-01 06:06:35,605] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:06:35,622] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.293 seconds
+[2024-08-01 06:07:05,764] {processor.py:163} INFO - Started process (PID=75090) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:07:05,766] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:07:05,767] {logging_mixin.py:109} INFO - [2024-08-01 06:07:05,767] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:07:05,833] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:07:06,031] {logging_mixin.py:109} INFO - [2024-08-01 06:07:06,031] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:07:06,047] {logging_mixin.py:109} INFO - [2024-08-01 06:07:06,047] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:07:06,065] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.304 seconds
+[2024-08-01 06:07:36,304] {processor.py:163} INFO - Started process (PID=75100) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:07:36,306] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:07:36,307] {logging_mixin.py:109} INFO - [2024-08-01 06:07:36,307] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:07:36,373] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:07:36,560] {logging_mixin.py:109} INFO - [2024-08-01 06:07:36,560] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:07:36,574] {logging_mixin.py:109} INFO - [2024-08-01 06:07:36,574] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:07:36,590] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.291 seconds
+[2024-08-01 06:47:06,723] {processor.py:163} INFO - Started process (PID=75118) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:47:06,725] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:47:06,727] {logging_mixin.py:109} INFO - [2024-08-01 06:47:06,726] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:47:06,848] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:47:07,150] {logging_mixin.py:109} INFO - [2024-08-01 06:47:07,150] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:47:07,167] {logging_mixin.py:109} INFO - [2024-08-01 06:47:07,167] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:47:07,187] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.468 seconds
+[2024-08-01 06:47:38,727] {processor.py:163} INFO - Started process (PID=75127) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:47:38,781] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:47:38,818] {logging_mixin.py:109} INFO - [2024-08-01 06:47:38,815] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:47:44,664] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:50:43,905] {processor.py:163} INFO - Started process (PID=75139) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:50:43,907] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:50:43,912] {logging_mixin.py:109} INFO - [2024-08-01 06:50:43,912] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:50:44,035] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:50:44,503] {logging_mixin.py:109} INFO - [2024-08-01 06:50:44,503] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:50:44,516] {logging_mixin.py:109} INFO - [2024-08-01 06:50:44,516] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:50:44,531] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.630 seconds
+[2024-08-01 06:51:16,019] {processor.py:163} INFO - Started process (PID=75150) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:51:16,138] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 06:51:16,224] {logging_mixin.py:109} INFO - [2024-08-01 06:51:16,213] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:51:16,825] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 06:51:16,825] {logging_mixin.py:109} INFO - [2024-08-01 06:51:16,825] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 06:51:16,825] {logging_mixin.py:109} INFO - [2024-08-01 06:51:16,825] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 06:51:16,825] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 1.036 seconds
+[2024-08-01 21:46:48,701] {processor.py:163} INFO - Started process (PID=75164) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:46:48,717] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 21:46:48,731] {logging_mixin.py:109} INFO - [2024-08-01 21:46:48,731] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:46:49,583] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:46:51,435] {logging_mixin.py:109} INFO - [2024-08-01 21:46:51,435] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 21:46:51,556] {logging_mixin.py:109} INFO - [2024-08-01 21:46:51,555] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 21:46:51,632] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 2.968 seconds
+[2024-08-01 21:47:21,787] {processor.py:163} INFO - Started process (PID=75174) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:47:21,791] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 21:47:21,794] {logging_mixin.py:109} INFO - [2024-08-01 21:47:21,794] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:47:22,032] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:47:22,500] {logging_mixin.py:109} INFO - [2024-08-01 21:47:22,500] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 21:47:22,533] {logging_mixin.py:109} INFO - [2024-08-01 21:47:22,533] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 21:47:22,559] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.793 seconds
+[2024-08-01 21:50:32,574] {processor.py:163} INFO - Started process (PID=75187) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:50:32,611] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 21:50:32,637] {logging_mixin.py:109} INFO - [2024-08-01 21:50:32,636] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:50:32,764] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 21:50:33,191] {logging_mixin.py:109} INFO - [2024-08-01 21:50:33,190] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 21:50:33,216] {logging_mixin.py:109} INFO - [2024-08-01 21:50:33,216] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 21:50:33,233] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.673 seconds
+[2024-08-01 23:05:21,677] {processor.py:163} INFO - Started process (PID=75197) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 23:05:21,681] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 23:05:21,683] {logging_mixin.py:109} INFO - [2024-08-01 23:05:21,683] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 23:05:21,805] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 23:05:22,187] {logging_mixin.py:109} INFO - [2024-08-01 23:05:22,186] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 23:05:22,205] {logging_mixin.py:109} INFO - [2024-08-01 23:05:22,205] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 23:05:22,476] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.805 seconds
+[2024-08-01 23:14:03,819] {processor.py:163} INFO - Started process (PID=75207) to work on /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 23:14:03,827] {processor.py:642} INFO - Processing file /opt/airflow/dags/extract_file_stg.py for tasks to queue
+[2024-08-01 23:14:03,830] {logging_mixin.py:109} INFO - [2024-08-01 23:14:03,830] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 23:14:03,986] {processor.py:654} INFO - DAG(s) dict_keys(['extract_stg']) retrieved from /opt/airflow/dags/extract_file_stg.py
+[2024-08-01 23:14:04,472] {logging_mixin.py:109} INFO - [2024-08-01 23:14:04,472] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-01 23:14:04,502] {logging_mixin.py:109} INFO - [2024-08-01 23:14:04,501] {dag.py:2935} INFO - Setting next_dagrun for extract_stg to None
+[2024-08-01 23:14:04,530] {processor.py:171} INFO - Processing /opt/airflow/dags/extract_file_stg.py took 0.725 seconds

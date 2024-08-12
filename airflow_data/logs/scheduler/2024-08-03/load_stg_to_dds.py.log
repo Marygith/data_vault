@@ -1,0 +1,7 @@
+[2024-08-03 00:08:18,358] {processor.py:163} INFO - Started process (PID=77729) to work on /opt/airflow/dags/load_stg_to_dds.py
+[2024-08-03 00:08:18,384] {processor.py:642} INFO - Processing file /opt/airflow/dags/load_stg_to_dds.py for tasks to queue
+[2024-08-03 00:08:18,399] {logging_mixin.py:109} INFO - [2024-08-03 00:08:18,396] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/load_stg_to_dds.py
+[2024-08-03 00:08:18,749] {processor.py:654} INFO - DAG(s) dict_keys(['load_stg_to_dds']) retrieved from /opt/airflow/dags/load_stg_to_dds.py
+[2024-08-03 00:08:19,453] {logging_mixin.py:109} INFO - [2024-08-03 00:08:19,452] {dag.py:2396} INFO - Sync 1 DAGs
+[2024-08-03 00:08:19,483] {logging_mixin.py:109} INFO - [2024-08-03 00:08:19,482] {dag.py:2935} INFO - Setting next_dagrun for load_stg_to_dds to None
+[2024-08-03 00:08:19,517] {processor.py:171} INFO - Processing /opt/airflow/dags/load_stg_to_dds.py took 1.286 seconds
