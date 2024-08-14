@@ -1,0 +1,81 @@
+[2024-08-14 22:34:38,858] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_stg_to_dds.load_data_dds manual__2024-08-14T22:34:37.298966+00:00 [queued]>
+[2024-08-14 22:34:38,874] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_stg_to_dds.load_data_dds manual__2024-08-14T22:34:37.298966+00:00 [queued]>
+[2024-08-14 22:34:38,874] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-14 22:34:38,875] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2024-08-14 22:34:38,875] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-14 22:34:38,892] {taskinstance.py:1259} INFO - Executing <Task(_PythonDecoratedOperator): load_data_dds> on 2024-08-14 22:34:37.298966+00:00
+[2024-08-14 22:34:38,897] {standard_task_runner.py:52} INFO - Started process 33298 to run task
+[2024-08-14 22:34:38,901] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'load_stg_to_dds', 'load_data_dds', 'manual__2024-08-14T22:34:37.298966+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/load_stg_to_dds.py', '--cfg-path', '/tmp/tmpedoxsxwa', '--error-file', '/tmp/tmps6xms7vc']
+[2024-08-14 22:34:38,906] {standard_task_runner.py:77} INFO - Job 100: Subtask load_data_dds
+[2024-08-14 22:34:38,975] {logging_mixin.py:109} INFO - Running <TaskInstance: load_stg_to_dds.load_data_dds manual__2024-08-14T22:34:37.298966+00:00 [running]> on host 915f51171463
+[2024-08-14 22:34:39,048] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=load_stg_to_dds
+AIRFLOW_CTX_TASK_ID=load_data_dds
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-14T22:34:37.298966+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-14T22:34:37.298966+00:00
+[2024-08-14 22:37:36,184] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/decorators/base.py", line 134, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/load_stg_to_dds.py", line 158, in load_data_dds
+    (hk_l_person_chat, row[0], row[1], 'TEST', datetime.now())
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 238, in execute
+    self._execute_simple_query(operation)
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 669, in _execute_simple_query
+    raise errors.QueryError.from_error_response(self._message, query)
+vertica_python.errors.InsufficientResources: Severity: ERROR, Message: Too many ROS containers exist for the following projections: 
+dds.L_person_chat_super (limit = 6153, ROS files = 6150, DV files = 0, new files = 6), Sqlstate: 53000, Hint: Please wait for the tuple mover to catch up.  Use 'select * from v_monitor.tuple_mover_operations;' to monitor.
+Also, please check if mergeout is disabled for this table. Use 'select * from v_catalog.tables where is_mergeout_enabled='f';', Routine: Exec_preparePlanForLaunch, File: /data/jenkins/workspace/RE-ReleaseBuilds/RE-Miner/server/vertica/Dist/PlanExecCoordinator.cpp, Line: 2777, Error Code: 5065, SQL: "                     INSERT INTO dds.L_person_chat(hk_L_person_chat, hk_person_id, hk_msg_id, source, load_date)                     VALUES ('P737_TEST_C406_TEST', 'P737_TEST', 'C406_TEST', 'TEST', '2024-08-14 22:37:36.170528')             "
+[2024-08-14 22:37:36,202] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=load_stg_to_dds, task_id=load_data_dds, execution_date=20240814T223437, start_date=20240814T223438, end_date=20240814T223736
+[2024-08-14 22:37:36,216] {standard_task_runner.py:92} ERROR - Failed to execute job 100 for task load_data_dds
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/decorators/base.py", line 134, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/load_stg_to_dds.py", line 158, in load_data_dds
+    (hk_l_person_chat, row[0], row[1], 'TEST', datetime.now())
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 238, in execute
+    self._execute_simple_query(operation)
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 669, in _execute_simple_query
+    raise errors.QueryError.from_error_response(self._message, query)
+vertica_python.errors.InsufficientResources: Severity: ERROR, Message: Too many ROS containers exist for the following projections: 
+dds.L_person_chat_super (limit = 6153, ROS files = 6150, DV files = 0, new files = 6), Sqlstate: 53000, Hint: Please wait for the tuple mover to catch up.  Use 'select * from v_monitor.tuple_mover_operations;' to monitor.
+Also, please check if mergeout is disabled for this table. Use 'select * from v_catalog.tables where is_mergeout_enabled='f';', Routine: Exec_preparePlanForLaunch, File: /data/jenkins/workspace/RE-ReleaseBuilds/RE-Miner/server/vertica/Dist/PlanExecCoordinator.cpp, Line: 2777, Error Code: 5065, SQL: "                     INSERT INTO dds.L_person_chat(hk_L_person_chat, hk_person_id, hk_msg_id, source, load_date)                     VALUES ('P737_TEST_C406_TEST', 'P737_TEST', 'C406_TEST', 'TEST', '2024-08-14 22:37:36.170528')             "
+[2024-08-14 22:37:36,234] {local_task_job.py:154} INFO - Task exited with return code 1
+[2024-08-14 22:37:36,267] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

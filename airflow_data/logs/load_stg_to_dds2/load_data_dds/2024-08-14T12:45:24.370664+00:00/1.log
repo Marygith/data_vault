@@ -1,0 +1,22 @@
+[2024-08-14 12:45:25,736] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_stg_to_dds2.load_data_dds manual__2024-08-14T12:45:24.370664+00:00 [queued]>
+[2024-08-14 12:45:25,747] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_stg_to_dds2.load_data_dds manual__2024-08-14T12:45:24.370664+00:00 [queued]>
+[2024-08-14 12:45:25,748] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-14 12:45:25,749] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2024-08-14 12:45:25,749] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-14 12:45:25,760] {taskinstance.py:1259} INFO - Executing <Task(_PythonDecoratedOperator): load_data_dds> on 2024-08-14 12:45:24.370664+00:00
+[2024-08-14 12:45:25,764] {standard_task_runner.py:52} INFO - Started process 27718 to run task
+[2024-08-14 12:45:25,767] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'load_stg_to_dds2', 'load_data_dds', 'manual__2024-08-14T12:45:24.370664+00:00', '--job-id', '76', '--raw', '--subdir', 'DAGS_FOLDER/load_stg_to_dds2.py', '--cfg-path', '/tmp/tmpjy5htj3v', '--error-file', '/tmp/tmpbkmh7vym']
+[2024-08-14 12:45:25,772] {standard_task_runner.py:77} INFO - Job 76: Subtask load_data_dds
+[2024-08-14 12:45:25,857] {logging_mixin.py:109} INFO - Running <TaskInstance: load_stg_to_dds2.load_data_dds manual__2024-08-14T12:45:24.370664+00:00 [running]> on host 915f51171463
+[2024-08-14 12:45:25,920] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=load_stg_to_dds2
+AIRFLOW_CTX_TASK_ID=load_data_dds
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-14T12:45:24.370664+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-14T12:45:24.370664+00:00
+[2024-08-14 12:45:34,604] {python.py:175} INFO - Done. Returned value was: None
+[2024-08-14 12:45:34,621] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=load_stg_to_dds2, task_id=load_data_dds, execution_date=20240814T124524, start_date=20240814T124525, end_date=20240814T124534
+[2024-08-14 12:45:34,675] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-08-14 12:45:34,719] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

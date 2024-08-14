@@ -1,0 +1,77 @@
+[2024-08-14 13:14:27,411] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_stg_to_dds2.load_data_dds manual__2024-08-14T13:14:26.395737+00:00 [queued]>
+[2024-08-14 13:14:27,426] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: load_stg_to_dds2.load_data_dds manual__2024-08-14T13:14:26.395737+00:00 [queued]>
+[2024-08-14 13:14:27,426] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-14 13:14:27,427] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2024-08-14 13:14:27,428] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-14 13:14:27,439] {taskinstance.py:1259} INFO - Executing <Task(_PythonDecoratedOperator): load_data_dds> on 2024-08-14 13:14:26.395737+00:00
+[2024-08-14 13:14:27,443] {standard_task_runner.py:52} INFO - Started process 28908 to run task
+[2024-08-14 13:14:27,447] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'load_stg_to_dds2', 'load_data_dds', 'manual__2024-08-14T13:14:26.395737+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/load_stg_to_dds2.py', '--cfg-path', '/tmp/tmpclkli6b1', '--error-file', '/tmp/tmpcx9ygdzl']
+[2024-08-14 13:14:27,451] {standard_task_runner.py:77} INFO - Job 86: Subtask load_data_dds
+[2024-08-14 13:14:27,579] {logging_mixin.py:109} INFO - Running <TaskInstance: load_stg_to_dds2.load_data_dds manual__2024-08-14T13:14:26.395737+00:00 [running]> on host 915f51171463
+[2024-08-14 13:14:27,668] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=load_stg_to_dds2
+AIRFLOW_CTX_TASK_ID=load_data_dds
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-14T13:14:26.395737+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-14T13:14:26.395737+00:00
+[2024-08-14 13:14:53,179] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/decorators/base.py", line 134, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/load_stg_to_dds2.py", line 68, in load_data_dds
+    (hk_msg_id, row[4], row[2], row[3], 'success', 'TEST', datetime.now()))
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 238, in execute
+    self._execute_simple_query(operation)
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 660, in _execute_simple_query
+    raise errors.QueryError.from_error_response(self._message, query)
+vertica_python.errors.QueryError: Severity: ERROR, Message: Invalid input syntax for integer: "01:18:25", Sqlstate: 22V02, Routine: scanint8, File: int8.c, Line: 124, Error Code: 3681, SQL: "                     INSERT INTO dds.s_chat_info(hk_msg_id, text_msg, msg_from, msg_to, status, source, load_date)                     VALUES ('1_TEST', 614, '01:18:25', 62, 'success', 'TEST', '2024-08-14 13:14:53.177019')                 "
+[2024-08-14 13:14:53,196] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=load_stg_to_dds2, task_id=load_data_dds, execution_date=20240814T131426, start_date=20240814T131427, end_date=20240814T131453
+[2024-08-14 13:14:53,212] {standard_task_runner.py:92} ERROR - Failed to execute job 86 for task load_data_dds
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/decorators/base.py", line 134, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/load_stg_to_dds2.py", line 68, in load_data_dds
+    (hk_msg_id, row[4], row[2], row[3], 'success', 'TEST', datetime.now()))
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 238, in execute
+    self._execute_simple_query(operation)
+  File "/home/airflow/.local/lib/python3.6/site-packages/vertica_python/vertica/cursor.py", line 660, in _execute_simple_query
+    raise errors.QueryError.from_error_response(self._message, query)
+vertica_python.errors.QueryError: Severity: ERROR, Message: Invalid input syntax for integer: "01:18:25", Sqlstate: 22V02, Routine: scanint8, File: int8.c, Line: 124, Error Code: 3681, SQL: "                     INSERT INTO dds.s_chat_info(hk_msg_id, text_msg, msg_from, msg_to, status, source, load_date)                     VALUES ('1_TEST', 614, '01:18:25', 62, 'success', 'TEST', '2024-08-14 13:14:53.177019')                 "
+[2024-08-14 13:14:53,237] {local_task_job.py:154} INFO - Task exited with return code 1
+[2024-08-14 13:14:53,273] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
